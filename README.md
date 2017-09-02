@@ -1,3 +1,3 @@
 # ImageProcessor
 
-1
+This is my assignment which is under the guidence of our teacher in Digital Media Integrated Processing. 
