@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>777</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnOpen">
+      <property name="text">
+       <string>open</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnReset">
+      <property name="text">
+       <string>reset</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnPre">
+        <property name="text">
+         <string>previous</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNext">
+        <property name="text">
+         <string>next</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>777</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSpatial_Filter">
+    <property name="title">
+     <string>Spatial Filter</string>
+    </property>
+    <addaction name="actionLinear"/>
+    <addaction name="actionGauss"/>
+    <addaction name="actionMedian"/>
+    <addaction name="actionBilateral"/>
+   </widget>
+   <widget class="QMenu" name="menuAffine_Transform">
+    <property name="title">
+     <string>Affine Transform</string>
+    </property>
+    <addaction name="actionAffine"/>
+   </widget>
+   <widget class="QMenu" name="menuIntensity_Transform">
+    <property name="title">
+     <string>Intensity Transform</string>
+    </property>
+    <addaction name="actionRGBToGray"/>
+    <addaction name="actionImageReversal"/>
+    <addaction name="actionLogTransform"/>
+    <addaction name="actionGrayToHist"/>
+    <addaction name="actionRGBToHist"/>
+    <addaction name="actionRGBToHSI"/>
+   </widget>
+   <widget class="QMenu" name="menuSpectrum_Transform">
+    <property name="title">
+     <string>Spectrum Transform</string>
+    </property>
+    <addaction name="actionSpectrum"/>
+    <addaction name="actionLowPassFilter"/>
+    <addaction name="actionHighPassFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuSaveImage">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSaveImage"/>
+   </widget>
+   <addaction name="menuSaveImage"/>
+   <addaction name="menuIntensity_Transform"/>
+   <addaction name="menuSpatial_Filter"/>
+   <addaction name="menuSpectrum_Transform"/>
+   <addaction name="menuAffine_Transform"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLinear">
+   <property name="text">
+    <string>Linear</string>
+   </property>
+  </action>
+  <action name="actionGaussBlur">
+   <property name="text">
+    <string>Gauss Blur</string>
+   </property>
+  </action>
+  <action name="actionBilateralFilter">
+   <property name="text">
+    <string>Bilateral Filter</string>
+   </property>
+  </action>
+  <action name="actionGauss">
+   <property name="text">
+    <string>Gauss</string>
+   </property>
+  </action>
+  <action name="actionMedian">
+   <property name="text">
+    <string>Median/Dilation/Erosion</string>
+   </property>
+  </action>
+  <action name="actionBilateral">
+   <property name="text">
+    <string>Bilateral</string>
+   </property>
+  </action>
+  <action name="actionDilation">
+   <property name="text">
+    <string>Dilation</string>
+   </property>
+  </action>
+  <action name="actionErosion">
+   <property name="text">
+    <string>Erosion</string>
+   </property>
+  </action>
+  <action name="actionAffine">
+   <property name="text">
+    <string>Affine</string>
+   </property>
+  </action>
+  <action name="actionSpectrum">
+   <property name="text">
+    <string>Spectrum</string>
+   </property>
+  </action>
+  <action name="actionRGBToGray">
+   <property name="text">
+    <string>RGBToGray</string>
+   </property>
+  </action>
+  <action name="actionImageReversal">
+   <property name="text">
+    <string>ImageReversal</string>
+   </property>
+  </action>
+  <action name="actionLogTransform">
+   <property name="text">
+    <string>LogTransform</string>
+   </property>
+  </action>
+  <action name="actionGrayToHist">
+   <property name="text">
+    <string>GrayToHist</string>
+   </property>
+  </action>
+  <action name="actionRGBToHist">
+   <property name="text">
+    <string>RGBToHist</string>
+   </property>
+  </action>
+  <action name="actionRGBToHSI">
+   <property name="text">
+    <string>RGBToHSI</string>
+   </property>
+  </action>
+  <action name="actionSaveImage">
+   <property name="text">
+    <string>SaveImage</string>
+   </property>
+  </action>
+  <action name="actionLowPassFilter">
+   <property name="text">
+    <string>LowPassFilter</string>
+   </property>
+  </action>
+  <action name="actionHighPassFilter">
+   <property name="text">
+    <string>HighPassFilter</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
